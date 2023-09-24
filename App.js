@@ -1,22 +1,15 @@
 import React from 'react'
 import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, View } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native'
+import StackNavigator from './src/navigation/StackNavigator'
 
 const App = () => {
   return (
-    <View style={styles.container}>
+    <NavigationContainer>
       <StatusBar style='auto' />
-    </View>
+      <StackNavigator />
+    </NavigationContainer>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#e4f2ff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-})
 
 export default App
