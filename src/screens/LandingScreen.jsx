@@ -11,6 +11,8 @@ const LandingScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    backgroundColor: '#e4f2ff',
     alignItems: 'center',
     justifyContent: 'center'
   }
