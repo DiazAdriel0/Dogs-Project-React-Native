@@ -1,10 +1,13 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 
-const LandingScreen = () => {
+const LandingScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text>LandingScreen</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('CreateScreen')}>
+        <Text>Go to Create</Text>
+      </TouchableOpacity>
     </View>
   )
 }
