@@ -5,8 +5,8 @@ const LandingScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text>LandingScreen</Text>
-      <TouchableOpacity onPress={() => navigation.navigate('CreateScreen')}>
-        <Text>Go to Create</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
+        <Text>Go to Home</Text>
       </TouchableOpacity>
     </View>
   )
