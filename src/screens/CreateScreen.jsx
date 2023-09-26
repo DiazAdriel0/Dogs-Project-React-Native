@@ -1,11 +1,15 @@
 import React from 'react'
 import { StyleSheet, View, Text } from 'react-native'
+import NavBar from '../components/NavBar'
 
-const CreateScreen = () => {
+const CreateScreen = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      <Text>CreateScreen</Text>
-    </View>
+    <>
+      <NavBar navigation={navigation} />
+      <View style={styles.container}>
+        <Text>CreateScreen</Text>
+      </View>
+    </>
   )
 }
 

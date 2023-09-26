@@ -1,17 +1,18 @@
 import React from 'react'
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
+import NavBar from '../components/NavBar'
 
 const HomeScreen = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      <Text>HomeScreen</Text>
-      <TouchableOpacity onPress={() => navigation.navigate('LandingScreen')}>
-        <Text>Go to Landing</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate('CreateScreen')}>
-        <Text>Go to Create</Text>
-      </TouchableOpacity>
-    </View>
+    <>
+      <NavBar navigation={navigation} />
+      <View style={styles.container}>
+        <Text>HomeScreen</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('LandingScreen')}>
+          <Text>Go to Landing</Text>
+        </TouchableOpacity>
+      </View>
+    </>
   )
 }
 
