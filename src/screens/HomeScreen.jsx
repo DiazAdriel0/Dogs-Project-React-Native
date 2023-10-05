@@ -25,8 +25,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   searchBar: {
-    backgroundColor: '#e4f2ff',
-    marginHorizontal: 15
+    backgroundColor: '#e4f2ff'
   }
 })
 
