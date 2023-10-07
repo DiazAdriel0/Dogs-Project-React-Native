@@ -1,7 +1,8 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import NavBar from '../components/NavBar'
 import SearchBar from '../components/SearchBar'
+import Cards from '../components/Cards'
 
 const HomeScreen = ({ navigation }) => {
   return (
@@ -11,7 +12,7 @@ const HomeScreen = ({ navigation }) => {
         <SearchBar />
       </View>
       <View style={styles.container}>
-        <Text>HomeScreen</Text>
+        <Cards />
       </View>
     </>
   )
