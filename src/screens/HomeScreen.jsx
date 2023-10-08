@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native'
 import NavBar from '../components/NavBar'
 import SearchBar from '../components/SearchBar'
 import Cards from '../components/Cards'
+import Pagination from '../components/Pagination'
 
 const HomeScreen = ({ navigation }) => {
   return (
@@ -11,6 +12,9 @@ const HomeScreen = ({ navigation }) => {
       <View style={styles.searchBar}>
         <SearchBar />
       </View>
+
+      <Pagination />
+
       <View style={styles.container}>
         <Cards />
       </View>

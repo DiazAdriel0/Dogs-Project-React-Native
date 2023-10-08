@@ -1,16 +1,18 @@
-import React, { useContext } from 'react'
-import { GlobalStateContext } from '../context/Global'
+import React from 'react'
 import { View, ScrollView } from 'react-native'
 import Card from './Card'
+import usePagination from '../hooks/usePagination'
 
 const Cards = () => {
-  const { allDogs } = useContext(GlobalStateContext)
+  const { currentPageDogs } = usePagination()
 
   return (
     <View>
       <ScrollView>
-        {allDogs.length &&
-          allDogs.map((dog) => dog.name && <Card key={dog.id} dog={dog} />)}
+        {currentPageDogs.length &&
+          currentPageDogs.map(
+            (dog) => dog.name && <Card key={dog.id} dog={dog} />
+          )}
       </ScrollView>
     </View>
   )

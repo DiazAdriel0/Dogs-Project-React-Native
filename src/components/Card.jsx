@@ -1,13 +1,17 @@
 import React from 'react'
-import { View, Text, Image } from 'react-native'
+import { StyleSheet, View, Text, Image } from 'react-native'
 
 const Card = ({ dog }) => {
   return (
-    <View>
+    <View style={styles.container}>
       {dog.name && (
         <>
           <View>
-            <Image src={dog.image?.url} alt={`${dog.name} image`} />
+            <Image
+              style={styles.image}
+              src={dog.image?.url}
+              alt={`${dog.name} image`}
+            />
           </View>
           <View>
             <Text>{dog.name}</Text>
@@ -21,5 +25,16 @@ const Card = ({ dog }) => {
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginHorizontal: 10
+  },
+  image: {
+    width: 200,
+    height: 200
+  }
+})
 
 export default Card
