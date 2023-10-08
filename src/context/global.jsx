@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from 'react'
-import axios from 'axios'
+// import axios from 'axios'
 
 export const GlobalStateContext = createContext()
 
@@ -16,7 +16,7 @@ export const GlobalProvider = ({ children }) => {
 
   useEffect(() => {
     const getAllDogs = async () => {
-      return fetch('http://localhost:3001/dogs')
+      return fetch('https://pi-deploy-production-9023.up.railway.app/dogs')
         .then((response) => response.json())
         .then((response) => {
           setAllDogsCopy(response)
