@@ -18,21 +18,22 @@ const Pagination = () => {
     <View style={styles.container}>
       <TouchableOpacity
         disabled={currentPage === 1}
-        style={currentPage === 1 ? styles.disabled : styles.buttons}
+        style={styles.buttons}
         onPress={currentPage > 1 && handleClickPrev}
       >
         <Text>Prev</Text>
       </TouchableOpacity>
 
       <FlatList
+        contentContainerStyle={styles.buttonsContainer}
         data={pages}
         renderItem={({ item }) => (
-          <TouchableOpacity
-            key={item.key}
-            onPress={() => handleClick(item)}
-            style={styles.buttons}
-          >
-            <View style={currentPage === item && styles.activeButton}>
+          <TouchableOpacity key={item.key} onPress={() => handleClick(item)}>
+            <View
+              style={
+                currentPage === item ? styles.activeButton : styles.buttons
+              }
+            >
               <Text>{item}</Text>
             </View>
           </TouchableOpacity>
@@ -42,7 +43,7 @@ const Pagination = () => {
 
       <TouchableOpacity
         disabled={currentPage === totalPages}
-        style={currentPage === totalPages ? styles.disabled : styles.buttons}
+        style={styles.buttons}
         onPress={currentPage < totalPages && handleClickNext}
       >
         <Text>Next</Text>
@@ -60,13 +61,20 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     backgroundColor: '#e4f2ff'
   },
+  buttonsContainer: {
+    width: 230,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'space-between',
+    backgroundColor: '#e4f2ff'
+  },
   buttons: {
     padding: 5,
-    margin: 5,
-    backgroundColor: '#e4f2ff'
+    margin: 5
   },
   activeButton: {
     padding: 5,
+    margin: 5,
     backgroundColor: '#92c4f3'
   }
 })
