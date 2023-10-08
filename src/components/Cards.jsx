@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { GlobalStateContext } from '../context/global'
+import { GlobalStateContext } from '../context/Global'
 import { View, ScrollView } from 'react-native'
 import Card from './Card'
 
