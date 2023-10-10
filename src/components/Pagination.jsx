@@ -70,11 +70,14 @@ const styles = StyleSheet.create({
   },
   buttons: {
     padding: 5,
-    margin: 5
+    margin: 5,
+    borderRadius: 5,
+    backgroundColor: '#c9e4fd'
   },
   activeButton: {
     padding: 5,
     margin: 5,
+    borderRadius: 5,
     backgroundColor: '#92c4f3'
   }
 })
