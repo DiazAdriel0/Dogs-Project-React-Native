@@ -6,19 +6,22 @@ const Card = ({ dog }) => {
     <View style={styles.container}>
       {dog.name && (
         <>
-          <View>
+          <View style={styles.imageContainer}>
             <Image
               style={styles.image}
               src={dog.image?.url}
               alt={`${dog.name} image`}
             />
           </View>
-          <View>
-            <Text>{dog.name}</Text>
-            <Text>Weight</Text>
+          <View style={styles.infoContainer}>
+            <Text style={styles.title}>{dog.name}</Text>
+            <Text style={styles.subtitle}>Weight:</Text>
             <Text>Imperial Weight: {dog.weight?.imperial}</Text>
             <Text>Metric Weight: {dog.weight?.metric}</Text>
-            <Text>Temperaments: {dog.temperament}</Text>
+            <Text style={styles.subtitle}>Temperaments:</Text>
+            <Text style={styles.infoText} numberOfLines={2}>
+              {dog.temperament}
+            </Text>
           </View>
         </>
       )}
@@ -29,11 +32,41 @@ const Card = ({ dog }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginHorizontal: 10
+    flexDirection: 'row',
+    margin: 10,
+    borderColor: '#00000050',
+    borderRadius: 10,
+    borderWidth: 0.5
+  },
+  imageContainer: {
+    backgroundColor: '#c9e4fd'
   },
   image: {
-    width: 200,
-    height: 200
+    margin: 10,
+    width: 140,
+    height: 140,
+    borderRadius: 25
+  },
+  infoContainer: {
+    marginVertical: 10,
+    marginLeft: 10,
+    justifyContent: 'center'
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 5
+  },
+  subtitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    opacity: 0.5,
+    marginTop: 5,
+    marginBottom: 2
+  },
+  infoText: {
+    width: 170,
+    paddingRight: 10
   }
 })
 
