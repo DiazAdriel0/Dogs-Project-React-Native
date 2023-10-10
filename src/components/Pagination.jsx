@@ -21,7 +21,7 @@ const Pagination = () => {
         style={styles.buttons}
         onPress={currentPage > 1 && handleClickPrev}
       >
-        <Text>Prev</Text>
+        <Text>{'<'}</Text>
       </TouchableOpacity>
 
       <FlatList
@@ -46,7 +46,7 @@ const Pagination = () => {
         style={styles.buttons}
         onPress={currentPage < totalPages && handleClickNext}
       >
-        <Text>Next</Text>
+        <Text>{'>'}</Text>
       </TouchableOpacity>
     </View>
   )
@@ -62,21 +62,21 @@ const styles = StyleSheet.create({
     backgroundColor: '#e4f2ff'
   },
   buttonsContainer: {
-    width: 230,
+    width: 237,
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'space-between',
+    justifyContent: 'space-around',
+    alignItems: 'space-around',
     backgroundColor: '#e4f2ff'
   },
   buttons: {
-    padding: 5,
-    margin: 5,
+    padding: 8,
+    margin: 10,
     borderRadius: 5,
     backgroundColor: '#c9e4fd'
   },
   activeButton: {
-    padding: 5,
-    margin: 5,
+    padding: 8,
+    margin: 10,
     borderRadius: 5,
     backgroundColor: '#92c4f3'
   }
