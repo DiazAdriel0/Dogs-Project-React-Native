@@ -1,17 +1,27 @@
-import React from 'react'
-import { StyleSheet, View, Text, Image } from 'react-native'
+import React, { useContext } from 'react'
+import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native'
+import { GlobalStateContext } from '../context/Global'
 
-const Card = ({ dog }) => {
+const Card = ({ dog, navigation }) => {
+  const { setDetailDog } = useContext(GlobalStateContext)
+
   return (
     <View style={styles.container}>
       {dog.name && (
         <>
           <View style={styles.imageContainer}>
-            <Image
-              style={styles.image}
-              src={dog.image?.url}
-              alt={`${dog.name} image`}
-            />
+            <TouchableOpacity
+              onPress={() => {
+                setDetailDog(dog)
+                navigation.navigate('DetailScreen')
+              }}
+            >
+              <Image
+                style={styles.image}
+                src={dog.image?.url}
+                alt={`${dog.name} image`}
+              />
+            </TouchableOpacity>
           </View>
           <View style={styles.infoContainer}>
             <Text style={styles.title}>{dog.name}</Text>
