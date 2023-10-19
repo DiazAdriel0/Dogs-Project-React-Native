@@ -16,7 +16,7 @@ const HomeScreen = ({ navigation }) => {
       <Pagination />
 
       <View style={styles.container}>
-        <Cards />
+        <Cards navigation={navigation} />
       </View>
     </>
   )
