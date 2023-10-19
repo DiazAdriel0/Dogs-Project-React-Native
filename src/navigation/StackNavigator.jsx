@@ -4,6 +4,7 @@ import HomeScreen from '../screens/HomeScreen'
 import LandingScreen from '../screens/LandingScreen'
 import CreateScreen from '../screens/CreateScreen'
 import AboutMeScreen from '../screens/AboutMeScreen'
+import DetailScreen from '../screens/DetailScreen'
 
 const Stack = createNativeStackNavigator()
 
@@ -23,6 +24,7 @@ const StackNavigator = () => {
       <Stack.Screen name='HomeScreen' component={HomeScreen} />
       <Stack.Screen name='CreateScreen' component={CreateScreen} />
       <Stack.Screen name='AboutMeScreen' component={AboutMeScreen} />
+      <Stack.Screen name='DetailScreen' component={DetailScreen} />
     </Stack.Navigator>
   )
 }
