@@ -9,6 +9,7 @@ export const GlobalProvider = ({ children }) => {
   const [allDogsFiltered, setAllDogsFiltered] = useState([])
   const [allDogsWhenGet, setAllDogsWhenGet] = useState([])
   const [allTemperaments, setAllTemperaments] = useState([])
+  const [detailDog, setDetailDog] = useState({})
   const [selectedTemperaments, setSelectedTemperaments] = useState([])
   const [selectedOrder, setSelectedOrder] = useState([])
   const [selectedOrigin, setSelectedOrigin] = useState([])
@@ -43,6 +44,8 @@ export const GlobalProvider = ({ children }) => {
         setAllDogsWhenGet,
         allTemperaments,
         setAllTemperaments,
+        detailDog,
+        setDetailDog,
         selectedTemperaments,
         setSelectedTemperaments,
         selectedOrder,
