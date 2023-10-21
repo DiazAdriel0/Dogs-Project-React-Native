@@ -24,7 +24,9 @@ const Card = ({ dog, navigation }) => {
             </TouchableOpacity>
           </View>
           <View style={styles.infoContainer}>
-            <Text style={styles.title}>{dog.name}</Text>
+            <Text style={styles.title} numberOfLines={1}>
+              {dog.name}
+            </Text>
             <Text style={styles.subtitle}>Weight:</Text>
             <Text>Imperial Weight: {dog.weight?.imperial}</Text>
             <Text>Metric Weight: {dog.weight?.metric}</Text>
@@ -64,6 +66,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   title: {
+    width: 170,
+    paddingRight: 10,
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 5
